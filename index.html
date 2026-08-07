@@ -101,6 +101,14 @@
         .delete:hover {
             background: darkred;
         }
+        
+        .clear-btn {
+            background: #dc3545;
+        }
+        
+        .clear-btn:hover {
+            background: #b52a37;
+        }
     </style>
 </head>
 
@@ -112,8 +120,8 @@
         <div class="input-box">
             <input type="text" id="taskInput" placeholder="Enter a task">
             <button onclick="addTask()">Add</button>
+            <button class="clear-btn" onclick="clearTasks()">Clear All</button>
         </div>
-
         <ul id="taskList"></ul>
         <p id="taskCount">Total Tasks: 0</p>
     </div>
@@ -128,6 +136,20 @@
         function updateTaskCount() {
             document.getElementById("taskCount").textContent =
                 `Total Tasks: ${tasks.length}`;
+        }
+
+        function clearTasks() {
+
+            if (confirm("Delete all tasks?")) {
+
+                tasks = [];
+
+                saveTasks();
+                displayTasks();
+                updateTaskCount();
+
+            }
+
         }
 
         function displayTasks() {
