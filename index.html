@@ -115,6 +115,7 @@
         </div>
 
         <ul id="taskList"></ul>
+        <p id="taskCount">Total Tasks: 0</p>
     </div>
 
     <script>
@@ -122,6 +123,11 @@
 
         function saveTasks() {
             localStorage.setItem("tasks", JSON.stringify(tasks));
+        }
+
+        function updateTaskCount() {
+            document.getElementById("taskCount").textContent =
+                `Total Tasks: ${tasks.length}`;
         }
 
         function displayTasks() {
@@ -149,8 +155,9 @@
                 taskList.appendChild(li);
 
             });
-
+            updateTaskCount();
         }
+
 
         function addTask() {
 
