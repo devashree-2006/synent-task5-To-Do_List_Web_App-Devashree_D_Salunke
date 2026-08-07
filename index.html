@@ -89,6 +89,13 @@
             color: gray;
         }
         
+        .task small {
+            display: block;
+            margin-top: 4px;
+            color: #777;
+            font-size: 12px;
+        }
+        
         .delete {
             background: red;
             color: white;
@@ -153,7 +160,9 @@
         }
 
         function displayTasks() {
+
             tasks.sort((a, b) => a.completed - b.completed);
+
             const taskList = document.getElementById("taskList");
             taskList.innerHTML = "";
 
@@ -163,12 +172,18 @@
 
                 li.innerHTML = `
         <div class="task">
-            <input type="checkbox" ${task.completed?"checked":""}
-            onchange="toggleTask(${index})">
+            <div>
+                <input type="checkbox" ${task.completed ? "checked" : ""}
+                onchange="toggleTask(${index})">
 
-            <span class="${task.completed?"completed":""}">
-                ${task.text}
-            </span>
+                <span class="${task.completed ? "completed" : ""}">
+                    ${task.text}
+                </span>
+
+                <br>
+
+                <small>${task.createdAt || "No date"}</small>
+            </div>
         </div>
 
         <button class="delete" onclick="deleteTask(${index})">✖</button>
@@ -177,6 +192,7 @@
                 taskList.appendChild(li);
 
             });
+
             updateTaskCount();
         }
 
@@ -196,7 +212,8 @@
             }
             tasks.push({
                 text: text,
-                completed: false
+                completed: false,
+                createdAt: new Date().toLocaleString()
             });
 
             input.value = "";
