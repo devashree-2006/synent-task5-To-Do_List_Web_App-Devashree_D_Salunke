@@ -161,7 +161,10 @@
                 alert("Please enter a task.");
                 return;
             }
-
+            if (tasks.some(task => task.text.toLowerCase() === text.toLowerCase())) {
+                alert("Task already exists.");
+                return;
+            }
             tasks.push({
                 text: text,
                 completed: false
