@@ -153,7 +153,7 @@
         }
 
         function displayTasks() {
-
+            tasks.sort((a, b) => a.completed - b.completed);
             const taskList = document.getElementById("taskList");
             taskList.innerHTML = "";
 
