@@ -1,0 +1,157 @@
+Report for TASK 5: TO-DO LIST WEB APP
+
+1. Introduction
+
+As part of my internship in Web Development, I developed a To-Do List Web App using HTML, CSS, and JavaScript. The main purpose of this project is to provide a simple and user-friendly way to create and manage daily tasks.
+
+The application allows users to add tasks, mark them as completed, delete tasks, and maintain their tasks even after refreshing the webpage. For storing the tasks, I used the browser's localStorage feature.
+
+2. Objective
+
+The main objective of this project was to develop a functional task management application while gaining practical experience in front-end web development.
+
+The project focuses on:
+
+- Creating a structured webpage using HTML.
+- Designing a responsive and user-friendly interface using CSS.
+- Implementing task management functionality using JavaScript.
+- Using localStorage to store tasks.
+- Ensuring that tasks remain available after refreshing the page.
+
+3. Technologies Used
+
+HTML5
+
+HTML was used to create the basic structure of the application, including the input field, buttons, task list, filters, and other elements.
+
+CSS3
+
+CSS was used to design the application and make the interface clean, attractive, and responsive across different screen sizes.
+
+JavaScript
+
+JavaScript was used to implement the main functionality of the application, such as adding, deleting, completing, filtering, and managing tasks.
+
+localStorage
+
+Browser localStorage was used to save the tasks. This allows the tasks to remain available even after the webpage is refreshed.
+
+4. Features
+
+The application includes the following features:
+
+Add Task
+
+Users can enter a task in the input field and add it to the task list.
+
+Mark Task as Completed
+
+Users can mark a task as completed. Completed tasks are visually differentiated from active tasks.
+
+Delete Task
+
+Users can remove tasks that are no longer required.
+
+Task Persistence
+
+Tasks are stored in localStorage, so they are not lost when the page is refreshed.
+
+Task Filters
+
+The application can provide different views for all, active, and completed tasks.
+
+Task Counter
+
+The application displays the number of tasks and their completion status.
+
+Responsive Design
+
+The interface is designed to work on both desktop and mobile devices.
+
+5. Working of the Application
+
+When the user enters a task and clicks the Add button, JavaScript creates a task object and adds it to the task list.
+
+Each task contains information such as:
+
+- Task ID
+- Task text
+- Completion status
+
+The task data is converted into a JSON format and stored in localStorage using JavaScript.
+
+When the webpage is opened or refreshed, the application retrieves the stored tasks from localStorage and displays them again.
+
+The basic working process is:
+
+Enter Task → Add Task → Display Task → Save to localStorage
+
+When a task is completed or deleted, the task data is updated and localStorage is updated accordingly.
+
+6. User Interface
+
+The application contains a simple interface consisting of:
+
+- Application title
+- Task input field
+- Add button
+- Task filter buttons
+- Task list
+- Complete/delete controls
+- Task counter
+- Clear completed option
+
+The design uses CSS styling, rounded elements, spacing, hover effects, and responsive layouts to provide a better user experience.
+
+7. Use of localStorage
+
+One of the important requirements of this project was to make tasks persist after refreshing the webpage.
+
+JavaScript localStorage was used for this purpose.
+
+Tasks are stored in the browser using a key such as:
+
+"tasks"
+
+The task array is converted into a JSON string before storing it. When the application loads, the stored JSON data is converted back into a JavaScript array and displayed.
+
+This helped me understand how browser storage can be used in web applications without requiring a separate database.
+
+8. Testing
+
+The application was tested for the following operations:
+
+Test Case| Expected Result| Status
+Add a task| Task appears in the list| Passed
+Add multiple tasks| All tasks appear correctly| Passed
+Mark task completed| Task shows completed status| Passed
+Delete task| Selected task is removed| Passed
+Refresh webpage| Previously added tasks remain| Passed
+Filter tasks| Relevant tasks are displayed| Passed
+Use on mobile screen| Layout adjusts properly| Passed
+
+9. Challenges Faced
+
+During the development of the project, I worked on understanding how HTML, CSS, and JavaScript work together to create an interactive webpage.
+
+One of the important parts was implementing localStorage correctly so that changes to the task list were saved and retrieved after refreshing the page. I also worked on making the interface responsive and ensuring that different task actions updated the displayed list correctly.
+
+10. Learning Outcomes
+
+Through this project, I gained practical experience in:
+
+- Building a complete webpage using HTML, CSS, and JavaScript.
+- Handling user input using JavaScript.
+- Working with arrays and objects in JavaScript.
+- Using DOM manipulation to dynamically update webpage content.
+- Implementing event handling.
+- Using localStorage for data persistence.
+- Creating responsive layouts using CSS.
+- Improving the usability and appearance of a web application.
+- Debugging and testing JavaScript functionality.
+
+11. Conclusion
+
+The To-Do List Web App successfully fulfills the requirements of the internship task. It provides the basic functionality required for managing tasks while also demonstrating the practical use of JavaScript and browser localStorage.
+
+This project helped me strengthen my understanding of front-end development and gave me practical experience in creating an interactive and responsive web application. It also helped me understand how different web technologies work together to build a functional project.
